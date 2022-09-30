@@ -1,0 +1,15 @@
+default: --publish-quiet
+# Cucumber profiles:
+custom: -t @custom_conversions --format html --out report.html --format pretty --publish-quiet
+
+home: -t @home_screen --format html --out report.html --format pretty --publish-quiet
+
+main: -t @main_menu --format html --out report.html --format pretty --publish-quiet
+
+any: -t @custom_conversions or @home_screen --format html --out report.html --format pretty --publish-quiet
+
+strict: -t @custom_conversions -t @home_screen --format html --out report.html --format pretty --publish-quiet
+
+wip: -t @wip --format html --out report.html --format pretty --publish-quiet
+
+gestures: -t @gestures --format html --out report.html --format pretty --publish-quiet
